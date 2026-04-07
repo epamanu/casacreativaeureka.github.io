@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CASA CREATIVA | NEO-BRUTALIST EDITORIAL</title>
+<!-- Google Fonts: Bebas Kai (Simulated via Bebas Neue), Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b70047", // Branded Magenta
+                        "secondary-container": "#00fbfb", // Cyan
+                        "tertiary-container": "#ffff00", // Yellow
+                        "inverse-surface": "#0e0e0e", // Deep Black
+                        "surface-container-lowest": "#ffffff", // Pure White
+                    },
+                    fontFamily: {
+                        "headline": ["Bebas Neue", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Font Assignments to match DS naming */
+        .font-bebas {
+            font-family: "Bebas Neue", sans-serif
+        }
+        .font-montserrat {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        /* Grain texture overlay */
+        .grain-overlay {
+            position: relative
+        }
+        .grain-overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBvJVqlicuGqhU1kq8EoFpZEf3zWMWraG-o-qbYzH0guzCM1kx8oTx6JitlBujkC8KfaDCAPvBOHp3RNGgSqcH5JJXXrghEvM7YQfpVlp8ws28LB90RTnWVLl-bNKedvlOAyIk5nySu_qCvIxv6kQxtFUzGrqFWOyjwOOr22sHwpgCnc6im-voWmjugvdR1EgB2IMKVP7PST54c7HqhOGtbiDzVXfWmxl17O7EdFSFMKDe5RrEwyNYM3uHEF1lw90ZSXMMW_ryVtGQ);
+            opacity: 0.05;
+            pointer-events: none
+        }
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            display: none
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none
+        }
+    </style>
+</head>
+<body class="bg-inverse-surface text-white antialiased overflow-x-hidden">
+<!-- Section A: Full-screen Hero Video Background -->
+<!-- SECTION A: HERO VIDEO BACKGROUND -->
+<header class="relative h-screen w-full overflow-hidden" id="section-a-hero-video">
+<!-- Video Background -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Dynamic cinematic montage of urban neon lights, fast-paced fashion shots, and bold graphic textures with high contrast and motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUH9U6fjjVtvBTll9ZHc0QwzBvySHVvuFZnDRW0hqMeKfhZI_Ui9eFYS9t264Sgm46ewTjrgYQslBDC63otQyVeXl6HwmOPMCQ7pD9paQNgeaurA_tRcqO2v06Eh46agmqbcHqPrg_QOIf9ov2EYIXDviqPC3hra0Og-yBIFQMPBlN4XGnpgdjFaRr1KUk8FSU52qJxEq8bCvKR_pAb-TdSZz2h8J_1xRNFfQzWdq5eDJHNt8X2L-afYjnYaJBjHHZHWLoZeNpwPM"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<!-- Top Navigation Shell (Transcribed from JSON) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-transparent">
+<div class="text-4xl font-black text-white font-bebas tracking-tighter">
+                CASA CREATIVA
+            </div>
+<button class="text-white hover:text-[#00fbfb] transition-colors" onclick="document.getElementById('menu-overlay').classList.remove('hidden')">
+<span class="material-symbols-outlined text-5xl">menu</span>
+</button>
+</nav>
+<!-- Hero Content -->
+<div class="relative z-10 h-full flex flex-col justify-end p-12">
+<h1 class="font-bebas text-[15vw] leading-[0.8] tracking-tighter text-white">
+                WE CREATE<br/>EMOTIONS
+            </h1>
+</div>
+</header>
+<!-- Menu Overlay (Full-screen Cyan) -->
+<div class="fixed inset-0 z-[100] bg-secondary-container hidden grain-overlay" id="menu-overlay">
+<div class="flex justify-between items-center px-12 py-8">
+<div class="text-4xl font-black text-black font-bebas tracking-tighter">CASA CREATIVA</div>
+<button class="text-black font-montserrat text-2xl" onclick="document.getElementById('menu-overlay').classList.add('hidden')">CLOSE</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 h-full px-12 pt-12 gap-12">
+<!-- Col 1 -->
+<div class="flex flex-col gap-8">
+<h2 class="font-bebas text-8xl text-black">WORK</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b-4 border-black pb-4">
+<span class="font-montserrat text-black text-xl">REEL 2024</span>
+<div class="flex gap-4">
+<button class="bg-tertiary-container text-black px-6 py-2 font-montserrat text-xs hover:bg-white transition-all">VER</button>
+<button class="bg-black text-white px-6 py-2 font-montserrat text-xs">DESCARGAR</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Col 2 -->
+<div class="flex flex-col gap-8">
+<h2 class="font-bebas text-8xl text-black">STUDIO</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b-4 border-black pb-4">
+<span class="font-montserrat text-black text-xl">PORTFOLIO</span>
+<div class="flex gap-4">
+<button class="bg-tertiary-container text-black px-6 py-2 font-montserrat text-xs hover:bg-white transition-all">VER</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Col 3 -->
+<div class="flex flex-col gap-8">
+<h2 class="font-bebas text-8xl text-black">OFFICE</h2>
+<p class="font-montserrat text-black text-sm max-w-xs">
+                    AVENIDA LAS AMERICAS, TORRE CORPORATIVA, PISO 12.
+                </p>
+</div>
+</div>
+</div>
+<!-- Section B: Magenta Brand Statement -->
+<section class="bg-[#ff0066] py-24 px-12 grain-overlay">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<div class="col-span-1">
+<h2 class="font-bebas text-[10rem] leading-none text-[#ffff00]">
+                    CASA<br/>CREATIVA
+                </h2>
+</div>
+<div class="col-span-1 hidden md:block"></div>
+<div class="col-span-1 space-y-8">
+<p class="font-montserrat text-white text-lg leading-relaxed">
+                    LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
+                </p>
+<p class="font-montserrat text-white text-lg leading-relaxed">
+                    DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCEPTEUR SINT OCCAECAT CUPIDATAT NON PROIDENT.
+                </p>
+</div>
+</div>
+</section>
+<!-- Section C: Full-width YouTube Loop -->
+<!-- SECTION C: YOUTUBE VIDEO BACKGROUND -->
+<section class="w-full h-[819px] bg-black" id="section-c-youtube-bg">
+<div class="w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="Abstract vibrant light leak motion graphics with fluid color transitions in magenta and cyan, looping seamlessly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIHXiZyHRPTB4VgTd8kUPigF_lPPX2lsi7fZKXD8_8wKT9dN7nvfhMv9rE1jOM7X9i4FfA4HKqtOTcJyoDS4K1t0GLFZvEY-a1TAp9P2U23PRwtu_S1SiBJWIsVeYbioQmPftUrXQgNTbUyjeGlh9DMi50o42gCDVPQQdNYkpgnDpNdop8-lDrtGWni4Af-q2dNS8cGaK6crhPERDd0tSEFNWI1bCUuKgMTM-7AJ1E-440fifjxmVdbmlvbfoKhM9QFje_f_UQGYY"/>
+<!-- Simulated Youtube Overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/20 text-9xl">play_circle</span>
+</div>
+</div>
+</section>
+<!-- SECTION C2: Full-screen Case Study Carousel -->
+<section class="relative h-screen bg-black overflow-hidden">
+<div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+<!-- Slide 1 -->
+<div class="flex-none w-full h-full snap-start relative group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Close-up of vibrant street art and graffiti with aggressive brush strokes and bright neon colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WAXL1DrxrfhY5dmwRntL3yrDVyH__aoMf070vHgoudMHVODV5DJ_vIrdH8xSbKW---JTZU3I5yj8WMTBLUDZE_ZKvzirRaTltvieH44-C97_T_oxZiRzlYaX7T1XfILTI09NsAXr5bk6l8eIRZdcsu9fiaN8vb-NdtJJYxUIHl-tw5D5YxQtYnIXip4xn60U2f3fsKF7RkmlDHfWisPzsaSFaUb7jFC3n8qNixDZ0DkdaC8OJSvhH2OGYtAxlQcwHkDUNYAgs-U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12 md:p-24 space-y-6">
+<h3 class="text-8xl md:text-[12rem] font-headline text-white leading-none">URBAN CHRONICLES</h3>
+<p class="font-body font-bold text-white max-w-xl text-lg tracking-wider">A REVOLUTIONARY DIGITAL ARCHIVE OF GLOBAL STREET ART CULTURE. AGGRESSIVE, RAW, AND UNFILTERED.</p>
+<button class="w-fit bg-tertiary text-black px-12 py-6 font-headline text-3xl hover:bg-white transition-all duration-300" onclick="document.getElementById('overlay-slider').classList.remove('translate-x-full')">VIEW CASE STUDY</button>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="flex-none w-full h-full snap-start relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Abstract fluid motion with magenta and cyan light trails on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6bMqQS-UAqY5V7CiRKMH9ZhPj1EEBVOAuV6QhM530s6Fr5c_nLoiczzRQs3HDqMN8qtnBjONkdDo7bbuY6uZyp4ma0cMqOIs5-bT0lsXhuBCyKfWDPtbYp7f3Nt296k08RlOqozQo6QXTKlzJndwp5olbYRGod9X2Ttkm3IB1lUtiG-QIZfKd5hqEU9RWGlbTEFEmn9_decF92JOXStL25VupR787ZuiCrHGBv2rOopp-oAJNdNAQhDq2J-zK2Eb-sUDDTM5E0qQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12 md:p-24 space-y-6">
+<h3 class="text-8xl md:text-[12rem] font-headline text-white leading-none">CYBER PULSE</h3>
+<p class="font-body font-bold text-white max-w-xl text-lg tracking-wider">REDEFINING TECH INTERFACES THROUGH THE LENS OF VINTAGE HARDWARE AND NEON AESTHETICS.</p>
+<button class="w-fit bg-tertiary text-black px-12 py-6 font-headline text-3xl hover:bg-white transition-all duration-300" onclick="document.getElementById('overlay-slider').classList.remove('translate-x-full')">VIEW CASE STUDY</button>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="flex-none w-full h-full snap-start relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Distorted television screen showing static and chromatic aberration effects in an artistic way" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUKREUsxeEFhfP5X8Y3FzSMzLP60wNEIIot6lk_ZGRu0a6HhPqAdMh88JmKEg-pM4yp-f9ChwM4c0ujahP0UVG_pN2XQo8IZtqZcaydWkdBeJbBli3H-ft9tgSQqWtk8ogol5gWuOrP9gJg85c7hPyRQXpmuSBZtox32T6n8Cr2VuCf7-GpBAYFJ8_jz5pmAl9usztm43dguSk2dDjQW8Uzo3qKtf6F916YJmccLTFL8XNfqOv7CguAiKIYw6NjZsYp5F16ipfLYk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12 md:p-24 space-y-6">
+<h3 class="text-8xl md:text-[12rem] font-headline text-white leading-none">STATIC NOISE</h3>
+<p class="font-body font-bold text-white max-w-xl text-lg tracking-wider">AN EXPERIMENTAL SOUND DESIGN HUB THAT BLURS THE LINE BETWEEN AUDIO AND VISUAL CHAOS.</p>
+<button class="w-fit bg-tertiary text-black px-12 py-6 font-headline text-3xl hover:bg-white transition-all duration-300" onclick="document.getElementById('overlay-slider').classList.remove('translate-x-full')">VIEW CASE STUDY</button>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="flex-none w-full h-full snap-start relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Brutalist concrete architecture with sharp angles and dramatic shadows during sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA6Rn1R790-jeABv-XECBPYKF2pE25wqzs_VZ-shv5BPPrGRrbbFBblmB4sP_HVTW92IVvYcV6kzm8QBPBJ8sLuB_7QdDDeDo7mKhegksplm0OHLHFiKBK5c_aCY-PwMCXf8I_L59MZoZAN_NXPTmtHIS9tcGPH28LVKnaHrcHY-dfemWfBAf4X21Tt0xUHgGEPDrm6Cp0axpe_WxFGP0A2cp__UHhtSxN_bvUizJyBrlsI5-EnRT50oVSarGjDEkFF_Y_g2hPgoE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12 md:p-24 space-y-6">
+<h3 class="text-8xl md:text-[12rem] font-headline text-white leading-none">CONCRETE VOID</h3>
+<p class="font-body font-bold text-white max-w-xl text-lg tracking-wider">A MINIMALIST E-COMMERCE EXPERIENCE BUILT FOR ARCHITECTURAL AND INDUSTRIAL DESIGNERS.</p>
+<button class="w-fit bg-tertiary text-black px-12 py-6 font-headline text-3xl hover:bg-white transition-all duration-300" onclick="document.getElementById('overlay-slider').classList.remove('translate-x-full')">VIEW CASE STUDY</button>
+</div>
+</div>
+</div>
+<!-- Carousel Nav -->
+<div class="absolute bottom-12 right-12 flex gap-4 z-30">
+<div class="w-12 h-2 bg-white/30"></div>
+<div class="w-12 h-2 bg-tertiary"></div>
+<div class="w-12 h-2 bg-white/30"></div>
+<div class="w-12 h-2 bg-white/30"></div>
+</div>
+</section>
+<!-- Section D: Two Blocks (Grid + Video) -->
+<section class="grid grid-cols-1 md:grid-cols-2">
+<!-- Left Block: 3x3 Grid on White -->
+<div class="bg-white p-12 aspect-square flex flex-col justify-center">
+<div class="grid grid-cols-3 grid-rows-3 gap-4 h-full border-4 border-black p-8">
+<div class="col-span-3 flex items-start">
+<span class="font-serif text-[#00fbfb] text-9xl leading-none">“</span>
+</div>
+<div class="col-span-3">
+<h3 class="font-bebas text-7xl text-[#ff0066] leading-tight">MARCAS CON AMOR</h3>
+</div>
+<div class="col-span-3 self-end">
+<p class="font-montserrat text-black text-xs">
+                        ESTAMOS COMPROMETIDOS CON LA EXCELENCIA VISUAL Y LA NARRATIVA DISRUPTIVA. CADA PROYECTO ES UNA PIEZA DE ARTE.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Right Block: Square Video -->
+<!-- SECTION D: SQUARE YOUTUBE VIDEO BLOCK #02 -->
+<div class="bg-black aspect-square overflow-hidden relative" id="section-d-block-02-video">
+<img class="w-full h-full object-cover" data-alt="High-energy fashion photoshoot behind the scenes, bright studio lighting, model moving dynamically in front of a colorful backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbv8cb177TSH-mv82k9oNlVj1AsrGka9QEceeqMsCY3bNZSw_hLbGLT69iyBoQ1f2W7e-K5wAypinbPtPB1L4KK2w46UK_FDEun9NRXhItXRItgSbf8wniphJZhLOPKXc569ev7P6ZpLhU8Znnm1DsXcz-tt6mNCPydClX6QFKxVmprq2nXL9tth-dCqvf97UqnTIrh2wevwA-az9WqIt-Q9mFOkixgHfABBsmsqmvGE-4A0C8Yw1u-Rc-0OkM6TnRgY3VHj51QJ4"/>
+</div>
+</section>
+<!-- Section E: Two Blocks (Image + Contact) -->
+<section class="grid grid-cols-1 md:grid-cols-2">
+<!-- Left Block: Square Image -->
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="Close-up of high-end camera equipment and studio lighting in a dark professional production environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeX7ROLt3_88vMUgKAmhzRnRJFLFgybpdwxx8ZtZnn44fzVMOHq-sWDLJi_iBUbI07AIj2oCCXiNON9mmDYafkAdJHpeTTFEVQ4zOzlnsSMt82RVUYZI9X1F6PSBWrgOR9JasXxTxGNvfB_KsHgUuGjjFeHw0vw3_RC94R_YNC3Jvsdgbv_vuEjjBKUfthNpjYb5a5YSbcYjW86k5mThwfwIb-rbhVhe4o2xLS4GZwgG3lts0mxRSXmELwEjc3Ipy1GlobtxeBLWc"/>
+</div>
+<!-- Right Block: Contact Form -->
+<div class="bg-inverse-surface p-12 aspect-square flex flex-col justify-center gap-12">
+<h2 class="font-bebas text-9xl text-tertiary-container">CONTACTA</h2>
+<form action="mailto:manoloeureka@gmail.com" class="space-y-8" enctype="text/plain" method="POST">
+<div class="border-b-4 border-white">
+<input class="bg-transparent border-none w-full font-montserrat text-white placeholder-white/50 focus:ring-0 px-0 py-4" placeholder="NAME / MARCA" type="text"/>
+</div>
+<div class="border-b-4 border-white">
+<input class="bg-transparent border-none w-full font-montserrat text-white placeholder-white/50 focus:ring-0 px-0 py-4" placeholder="EMAIL" type="email"/>
+</div>
+<div class="border-b-4 border-white">
+<textarea class="bg-transparent border-none w-full font-montserrat text-white placeholder-white/50 focus:ring-0 px-0 py-4 resize-none" placeholder="MESSAGE" rows="3"></textarea>
+</div>
+<button class="bg-tertiary-container text-black font-montserrat text-xl w-48 h-48 flex items-center justify-center hover:bg-white transition-colors" type="submit">
+                    ENVIAR
+                </button>
+</form>
+</div>
+</section>
+<!-- Section F: Full-width YouTube Loop -->
+<!-- SECTION F: YOUTUBE VIDEO BACKGROUND -->
+<section class="w-full h-[819px] bg-black" id="section-f-youtube-bg">
+<div class="w-full h-full relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist architectural shapes moving in slow motion, concrete textures with dramatic shadows and magenta neon glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtC5fFDqgpz_yHnpfmNCIC5T6xvM62oQSCNmWvV1hwBUy74dQHld0EDrZq_9yaGChw8ZNxw5p6uBRfHIhOtUrU-HHMqgPw_ferVs4fCCV5u_xZlm-8W8kQzsS2McXRjaXo9tLIZOt0h8l7VeaxtEYqfBMeiz-5u54djUxtvgqOnq2NyBt0s1B8HsVDyImK5ZetZ0i2iFP6DmWlWZCUCOyHZKes3x3_KQffVzi1TLLd7eDere-Kk23ZxiAopYSXSGzLXKnuadG1w_c"/>
+</div>
+</section>
+<!-- Footer (Transcribed from JSON) -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-12 gap-8 bg-[#0e0e0e] text-[#ffff00] font-montserrat text-xs tracking-widest">
+<div class="text-white font-black text-lg">CASA CREATIVA</div>
+<div class="flex gap-8">
+<a class="text-white/60 hover:text-[#ff0066]" href="#">INSTAGRAM</a>
+<a class="text-white/60 hover:text-[#ff0066]" href="#">VIMEO</a>
+<a class="text-white/60 hover:text-[#ff0066]" href="#">LINKEDIN</a>
+<a class="text-white/60 hover:text-[#ff0066]" href="#">WHATSAPP</a>
+</div>
+<div class="text-white/60">© 2024 CASA CREATIVA. ALL RIGHTS RESERVED.</div>
+</footer>
+<!-- WhatsApp Floating Action (Fixed 5x5 concept adapted for visibility/utility) -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-white flex items-center justify-center z-[200] shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:scale-110 transition-transform" href="https://wa.me/584126908447" target="_blank">
+<span class="material-symbols-outlined text-black text-3xl">chat</span>
+<!-- Tiny white pixel anchor as requested -->
+<div class="absolute bottom-0 right-0 w-[5px] h-[5px] bg-white"></div>
+</a>
+</body></html>
