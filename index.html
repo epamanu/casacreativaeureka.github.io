@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>CASA CREATIVA | Eureka!*</title>
+    
+    <!-- PRELOAD COMMANDS -->
+    <link rel="preload" href="eurekaintro.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="eurekalogo.png" as="image">
+    <link rel="preload" href="eurekastamp.png" as="image">
+    <link rel="preload" href="epamanu.png" as="image">
+    <link rel="preload" href="whatsappicon.png" as="image">
+    <link rel="preload" href="eurekaconquista.mp4" as="video" type="video/mp4">
+
+    <!-- Google Fonts: Bebas Neue, Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Montserrat:wght@700;900&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b70047", // Branded Magenta
+                        "secondary-container": "#00fbfb", // Cyan
+                        "tertiary-container": "#ffff00", // Yellow
+                        "inverse-surface": "#0e0e0e", // Deep Black
+                        "surface-container-lowest": "#ffffff", // Pure White
+                    },
+                    fontFamily: {
+                        "headline": ["Bebas Neue", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-bebas { font-family: "Bebas Neue", sans-serif }
+        .font-montserrat { font-family: "Montserrat", sans-serif; font-weight: 700; text-transform: uppercase }
+        .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24 }
+        .grain-overlay { position: relative }
+        .grain-overlay::before {
+            content: ""; position: absolute; inset: 0;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBvJVqlicuGqhU1kq8EoFpZEf3zWMWraG-o-qbYzH0guzCM1kx8oTx6JitlBujkC8KfaDCAPvBOHp3RNGgSqcH5JJXXrghEvM7YQfpVlp8ws28LB90RTnWVLl-bNKedvlOAyIk5nySu_qCvIxv6kQxtFUzGrqFWOyjwOOr22sHwpgCnc6im-voWmjugvdR1EgB2IMKVP7PST54c7HqhOGtbiDzVXfWmxl17O7EdFSFMKDe5RrEwyNYM3uHEF1lw90ZSXMMW_ryVtGQ);
+            opacity: 0.05; pointer-events: none;
+        }
+        ::-webkit-scrollbar { display: none }
+        * { -ms-overflow-style: none; scrollbar-width: none }
+
+        @media (min-width: 768px) { .desktop-content { display: block; } .mobile-placeholder { display: none; } }
+        @media (max-width: 767px) { .desktop-content { display: none; } .mobile-placeholder { display: block; } }
+
+        /* Carousel Navigation Buttons */
+        .carousel-btn {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+        .carousel-btn.left { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-inverse-surface text-white antialiased overflow-x-hidden">
+    <div class="desktop-content">
+        <!-- Section A -->
+        <header class="relative h-screen w-full overflow-hidden" id="section-a-hero-video">
+            <!-- MP4 Background: eurekaintro.mp4 -->
+            <div class="absolute inset-0 z-0">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="eurekaintro.mp4" type="video/mp4">
+                    <!-- Fallback placeholder image -->
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUH9U6fjjVtvBTll9ZHc0QwzBvySHVvuFZnDRW0hqMeKfhZI_Ui9eFYS9t264Sgm46ewTjrgYQslBDC63otQyVeXl6HwmOPMCQ7pD9paQNgeaurA_tRcqO2v06Eh46agmqbcHqPrg_QOIf9ov2EYIXDviqPC3hra0Og-yBIFQMPBlN4XGnpgdjFaRr1KUk8FSU52qJxEq8bCvKR_pAb-TdSZz2h8J_1xRNFfQzWdq5eDJHNt8X2L-afYjnYaJBjHHZHWLoZeNpwPM" class="w-full h-full object-cover">
+                </video>
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+            <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-transparent">
+                <!-- PNG Logo: eurekalogo.png -->
+                <img src="eurekalogo.png" alt="Logo" class="h-12 w-auto">
+                <!-- PNG Menu Icon: eurekastamp.png -->
+                <button class="hover:opacity-80 transition-opacity" onclick="document.getElementById('menu-overlay').classList.remove('hidden')">
+                    <img src="eurekastamp.png" alt="Menu" class="h-12 w-auto">
+                </button>
+            </nav>
+        </header>
+
+        <!-- Menu Overlay Placeholder -->
+        <div class="fixed inset-0 z-[100] bg-secondary-container hidden grain-overlay" id="menu-overlay">
+            <!-- [MENU OVERLAY CODING TO BE INSERTED HERE IN THE FUTURE] -->
+            <button class="absolute top-8 right-12 text-black font-montserrat text-2xl" onclick="document.getElementById('menu-overlay').classList.add('hidden')">CLOSE</button>
+        </div>
+
+        <!-- Section B -->
+        <section class="bg-[#ff0066] py-24 px-12 grain-overlay min-h-screen flex flex-col justify-center">
+            <div class="w-[80%] mx-auto mb-16">
+                <h1 class="font-bebas text-[15rem] leading-none text-[#ffff00] text-left">
+                    <div>CASA</div>
+                    <div>CREATIVA</div>
+                </h1>
+            </div>
+            <div class="grid grid-cols-3 gap-12 w-full">
+                <div class="col-span-1"></div> <!-- Empty First Column -->
+                <div class="col-span-1">
+                    <p class="font-montserrat text-white text-lg leading-relaxed">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.</p>
+                </div>
+                <div class="col-span-1">
+                    <p class="font-montserrat text-white text-lg leading-relaxed">DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C -->
+        <section class="w-full h-screen bg-black" id="section-c-youtube-bg">
+            <!-- Embedded YouTube Loop (No controls, muted) -->
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&controls=0&playlist=VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+
+        <!-- Section C2 -->
+        <section class="relative h-screen w-full bg-inverse-surface overflow-hidden" id="section-c2-carousel">
+            <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth" id="carousel-container">
+                <!-- Slide 1-4 Template -->
+                <div class="flex-none w-full h-full snap-start relative group">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WAXL1DrxrfhY5dmwRntL3yrDVyH__aoMf070vHgoudMHVODV5DJ_vIrdH8xSbKW---JTZU3I5yj8WMTBLUDZE_ZKvzirRaTltvieH44-C97_T_oxZiRzlYaX7T1XfILTI09NsAXr5bk6l8eIRZdcsu9fiaN8vb-NdtJJYxUIHl-tw5D5YxQtYnIXip4xn60U2f3fsKF7RkmlDHfWisPzsaSFaUb7jFC3n8qNixDZ0DkdaC8OJSvhH2OGYtAxlQcwHkDUNYAgs-U">
+                    <div class="relative h-full flex flex-col justify-end p-24 space-y-6">
+                        <h3 class="text-[10rem] font-headline text-white leading-none">URBAN CHRONICLES</h3>
+                        <button class="w-fit bg-tertiary-container text-black px-12 py-6 font-headline text-3xl hover:bg-black hover:text-tertiary-container transition-all duration-300" onclick="openOverlay(1)">VIEW CASE STUDY</button>
+                    </div>
+                </div>
+                <!-- ... other slides following same pattern ... -->
+            </div>
+            <!-- Triangle Controls -->
+            <button class="absolute left-8 top-1/2 -translate-y-1/2 carousel-btn left" onclick="scrollCarousel(-1)"></button>
+            <button class="absolute right-8 top-1/2 -translate-y-1/2 carousel-btn" onclick="scrollCarousel(1)"></button>
+            <!-- Rect Indicators -->
+            <div class="absolute bottom-12 right-12 flex gap-4">
+                <div class="w-8 h-4 bg-tertiary-container"></div>
+                <div class="w-8 h-4 bg-black"></div>
+                <div class="w-8 h-4 bg-black"></div>
+                <div class="w-8 h-4 bg-black"></div>
+            </div>
+            <!-- Slider Overlays Placeholders -->
+            <div id="overlay-container">
+                <!-- [INSERT SLIDER-OVERLAY-1 TO 4 CODING HERE IN THE FUTURE] -->
+            </div>
+        </section>
+
+        <!-- Section D -->
+        <section class="grid grid-cols-2">
+            <div class="bg-white p-12 aspect-square flex flex-col justify-center">
+                <div class="w-[80%] space-y-4">
+                    <h2 class="font-bebas text-9xl text-[#ff0066] leading-none">MARCAS</h2>
+                    <h2 class="font-bebas text-9xl text-[#ff0066] leading-none">CON</h2>
+                    <h2 class="font-bebas text-9xl text-[#ff0066] leading-none">AMOR</h2>
+                </div>
+            </div>
+            <!-- YouTube Background Block -->
+            <div class="bg-black aspect-square overflow-hidden" id="section-d-youtube-block">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&controls=0&playlist=VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+            </div>
+        </section>
+
+        <!-- Section E -->
+        <section class="grid grid-cols-2">
+            <!-- PNG Image: epamanu.png -->
+            <div class="aspect-square overflow-hidden">
+                <img src="epamanu.png" alt="Production" class="w-full h-full object-cover">
+            </div>
+            <!-- Functional Contact Form -->
+            <div class="bg-inverse-surface p-12 aspect-square flex flex-col justify-center">
+                <h2 class="font-bebas text-9xl text-tertiary-container mb-8">CONTACTA</h2>
+                <form action="mailto:manoloeureka@gmail.com" method="POST" enctype="text/plain" class="space-y-8">
+                    <div class="border-b-4 border-white"><input type="text" name="name" placeholder="NAME / MARCA" class="bg-transparent border-none w-full text-white py-4"></div>
+                    <div class="border-b-4 border-white"><input type="email" name="email" placeholder="EMAIL" class="bg-transparent border-none w-full text-white py-4"></div>
+                    <div class="border-b-4 border-white"><textarea name="message" placeholder="MESSAGE" class="bg-transparent border-none w-full text-white py-4"></textarea></div>
+                    <button type="submit" class="bg-tertiary-container text-black font-montserrat text-xl px-12 py-6 self-end hover:bg-white transition-colors">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section F -->
+        <section class="w-full h-screen bg-black" id="section-f-video">
+            <!-- MP4 Background: eurekaconquista.mp4 -->
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="eurekaconquista.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full bg-[#0e0e0e] py-12 px-12 text-[#ffff00] flex justify-between items-center">
+            <div class="font-bebas text-2xl text-white">CASA CREATIVA</div>
+            <div class="flex gap-8 font-montserrat text-xs tracking-widest">
+                <a href="https://wa.me/584126908447">WHATSAPP</a>
+                <span>© 2024 CASA CREATIVA. ALL RIGHTS RESERVED.</span>
+            </div>
+        </footer>
+
+        <!-- WhatsApp PNG: whatsappicon.png -->
+        <a class="fixed bottom-8 right-8 w-16 h-16 z-[200] hover:scale-110 transition-transform" href="https://wa.me/584126908447">
+            <img src="whatsappicon.png" alt="WhatsApp" class="w-full h-full">
+        </a>
+    </div>
+
+    <!-- START OF MOBILE/TABLET CODING PLACEHOLDER -->
+    <div class="mobile-placeholder">
+        <!-- [TABLET AND MOBILE CODING TO BE INSERTED HERE IN THE FUTURE] -->
+    </div>
+</body>
+</html>
